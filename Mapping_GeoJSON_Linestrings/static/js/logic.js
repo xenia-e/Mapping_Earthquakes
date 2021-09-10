@@ -32,19 +32,13 @@ let map = L.map('mapid', {
 // Pass our map layers into our layers control and add the layers control to the map.
 L.control.layers(baseMaps).addTo(map);
 
-// // Accessing the airport GeoJSON URL
-// let airportData = "https://raw.githubusercontent.com/xenia-e/Mapping_Earthquakes/main/majorAirports.json";
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoData = "https://raw.githubusercontent.com/xenia-e/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData = 'https://raw.githubusercontent.com/xenia-e/Mapping_Earthquakes/main/torontoRoutes.json';
 
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data) {
-    console.log(data);
-  // Creating a GeoJSON layer with the retrieved data.
-  // L.geoJson(data, {
-  //   onEachFeature: function(feature, layer) {
-  //     layer.bindPopup("<h2> Airport code: " + feature.properties.faa + "</h2><hr><h3> Airport name: " + feature.properties.name+'</h3>')
-  //   }
-  //}).addTo(map);
+  console.log(data);
+// Creating a GeoJSON layer with the retrieved data.
+L.geoJson(data).addTo(map);
 });
