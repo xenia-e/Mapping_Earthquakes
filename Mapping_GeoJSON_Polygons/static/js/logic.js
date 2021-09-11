@@ -24,8 +24,8 @@ let baseMaps = {
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-  center: [30, 30],
-  zoom: 2,
+  center: [43.7, -79.3],
+  zoom: 11,
   layers: [streets]
 })
 
@@ -33,15 +33,17 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the airport GeoJSON URL
-let airportData = "https://raw.githubusercontent.com/xenia-e/Mapping_Earthquakes/main/majorAirports.json";
+let torontoHoods = 'https://raw.githubusercontent.com/xenia-e/Mapping_Earthquakes/main/torontoNeighborhoods.json';
 
 // Grabbing our GeoJSON data.
-d3.json(airportData).then(function(data) {
+d3.json(torontoHoods).then(function(data) {
     console.log(data);
   // Creating a GeoJSON layer with the retrieved data.
   L.geoJson(data, {
+    coloe: 'blue',
+    weight:1,
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("<h2> Airport code: " + feature.properties.faa + "</h2><hr><h3> Airport name: " + feature.properties.name+'</h3>')
+      layer.bindPopup("<h2> Neighborhood: " + feature.properties.AREA_NAME +'</h3>')
     }
   }).addTo(map);
 });
