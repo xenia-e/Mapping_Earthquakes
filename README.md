@@ -2,11 +2,11 @@
 
 # Overview of the project 
 
-Create earthquake data map in relation to the tectonic plates’ location on the Earth, and all the earthquakes with a magnitude greater than 4.5 on the map. 
+Create an earthquake data map with the tectonic plates’ location on the Earth. Show all the earthquakes with a magnitude greater than 4.5 on the map. 
  
  
  ## Methods 
--  **Leaflet** open-source JavaScript library for mobile-friendly interactive maps 
+- **Leaflet** open-source JavaScript library for mobile-friendly interactive maps 
 - **mapbox** live location platform
 - **D3** JavaScript library 
 
@@ -18,7 +18,8 @@ Data source:
 
 
 ## Deliverables
-![map]()
+![map](https://github.com/xenia-e/Mapping_Earthquakes/blob/main/Earthquake_Challenge/static/images/map.png)
+
 - __Deliverable 1:__ Tectonic Plate Data Overlay Map
 - __Deliverable 2:__ Major Earthquake Data Overlay Map
 - __Deliverable 3:__ Additional Map
