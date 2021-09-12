@@ -7,6 +7,7 @@ Create earthquake data map in relation to the tectonic plates’ location on the
  
  ## Methods 
 -  **Leaflet** open-source JavaScript library for mobile-friendly interactive maps 
+- **mapbox** live location platform
 - **D3** JavaScript library 
 
 ### Resources
@@ -17,6 +18,7 @@ Data source:
 
 
 ## Deliverables
+![map]()
 - __Deliverable 1:__ Tectonic Plate Data Overlay Map
 - __Deliverable 2:__ Major Earthquake Data Overlay Map
 - __Deliverable 3:__ Additional Map
